@@ -91,3 +91,15 @@ Aplikasi ini menerapkan konsep **Object-Oriented Programming (OOP)** untuk memba
 
 Pendekatan ini membuat aplikasi lebih mudah dipahami, dirawat, dan dikembangkan.
 
+## Testing
+Pengujian dilakukan secara **manual** untuk memastikan setiap fitur utama aplikasi berjalan sesuai dengan kebutuhan sistem.
+| No | Skenario Pengujian        | Langkah Singkat                                                                 | Hasil yang Diharapkan                                                         | Status |
+|----|--------------------------|----------------------------------------------------------------------------------|-------------------------------------------------------------------------------|--------|
+| 1  | Menampilkan katalog buku | Buka aplikasi → Pilih role **User** → Masuk ke halaman katalog                  | Seluruh buku pada katalog berhasil ditampilkan                                | Pass   |
+| 2  | Login berhasil           | Buka aplikasi → Pilih role **Petugas** → Input username dan password yang benar | Petugas berhasil masuk ke halaman **Dashboard Petugas**                       | Pass   |
+| 3  | Login gagal              | Buka aplikasi → Pilih role **Petugas** → Input username atau password yang salah| Muncul pesan kesalahan dan tetap berada di halaman login                      | Pass   |
+| 4  | Peminjaman buku          | Buka Dashboard → Klik **Tambah Transaksi** → Isi form → Simpan                  | Data peminjaman tersimpan, jatuh tempo otomatis +7 hari (read-only)           | Pass   |
+| 5  | Pengembalian buku        | Buka Dashboard → Klik tombol centang (✔) pada kartu peminjaman                 | Status peminjaman berubah menjadi **Selesai** dan buku kembali tersedia       | Pass   |
+
+
+
