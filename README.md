@@ -60,4 +60,5 @@ Views/
 
 ## ERD 
 <img width="698" height="650" alt="image" src="https://github.com/user-attachments/assets/dba4aedf-469d-4c71-96ec-a83baf60b6ce" /> 
+
 Anggota dan Buku memiliki relasi many-to-many, sehingga digunakan tabel Data_Peminjaman sebagai tabel penghubung. Data_Peminjaman memiliki relasi one-to-many dengan Petugas, karena satu petugas dapat menangani banyak transaksi peminjaman.
