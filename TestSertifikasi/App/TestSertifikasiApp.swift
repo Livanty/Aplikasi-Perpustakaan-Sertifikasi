@@ -11,7 +11,7 @@ import SwiftUI
 struct TestSertifikasiApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PilihPeranView()
         }
     }
 }
