@@ -63,7 +63,8 @@ Views/
 - TransaksiRow
 
 ## ERD 
-<img width="698" height="650" alt="image" src="https://github.com/user-attachments/assets/dba4aedf-469d-4c71-96ec-a83baf60b6ce" /> 
+<img width="458" height="256" alt="image" src="https://github.com/user-attachments/assets/a1986bfc-9a41-46ed-ad95-a99a9432c3d0" />
+ 
 
 Anggota dan Buku memiliki relasi many-to-many, sehingga digunakan tabel Data_Peminjaman sebagai tabel penghubung. Data_Peminjaman memiliki relasi one-to-many dengan Petugas, karena satu petugas dapat menangani banyak transaksi peminjaman.
 
@@ -71,23 +72,16 @@ Anggota dan Buku memiliki relasi many-to-many, sehingga digunakan tabel Data_Pem
 
 Aplikasi ini menerapkan konsep **Object-Oriented Programming (OOP)** untuk membangun kode yang terstruktur dan modular.
 
-- **Class & Object**  
-  Setiap fitur utama direpresentasikan dalam bentuk class seperti `TransaksiService`, `AnggotaService`, dan `ViewModel`.
+1. Encapsulation  
+Data dan logika dibungkus dalam class tertentu.  
+Akses database dibatasi hanya melalui layer **Service**, sehingga View tidak berinteraksi langsung dengan database.
 
-- **Encapsulation**  
-  Detail implementasi disembunyikan di dalam class, misalnya properti database dibuat `private`.
+2. Abstraction  
+Detail teknis seperti query database dan proses bisnis disembunyikan di **Service** dan **ViewModel**.  
+View hanya menggunakan fungsi yang tersedia tanpa mengetahui implementasinya.
 
-- **Separation of Concerns**  
-  Aplikasi dipisahkan menjadi View (UI), ViewModel (state & logika), Service (logika bisnis & database), dan Model/DTO (data).
-
-- **Abstraction**  
-  View tidak berinteraksi langsung dengan database, melainkan melalui ViewModel.
-
-- **Dependency Injection**  
-  Service dikirim ke ViewModel melalui initializer untuk mengurangi ketergantungan langsung.
-
-- **Reactive State**  
-  State dikelola menggunakan `@Published` dan `@StateObject` sehingga UI otomatis diperbarui saat data berubah.
+3. Inheritance  
+Class `View` dan `ViewModel` memanfaatkan pewarisan dari framework SwiftUI seperti `View` dan `ObservableObject`.
 
 Pendekatan ini membuat aplikasi lebih mudah dipahami, dirawat, dan dikembangkan.
 
